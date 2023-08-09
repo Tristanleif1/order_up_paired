@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Order up! </h1>
+
+<form method="POST">
+    {{ form.csrf_token }}
+    <div>
+        <h2>Assign tables</h2>
+        {{ form.tables }}
+        {{ form.servers }}
+        {{ form.assign }}
+    </div>
+</form>
+{% endblock %}
